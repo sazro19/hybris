@@ -31,4 +31,8 @@ public class DefaultBandService implements BandService {
         }
         return result.get(0);
     }
+
+    public void setBandDAO(BandDAO bandDAO) {
+        this.bandDAO = bandDAO;
+    }
 }
