@@ -3,17 +3,17 @@
 			xsi:noNamespaceSchemaLocation="items.xsd">
 
 	<enumtypes>
-		<enumtype code="ConcertType" autocreate="true" generate="true" dynamic="false">
+		<enumtype code="ConcertType" dynamic="false">
 			<value code="openair" />
 			<value code="indoor" />
 		</enumtype>
 
-		<enumtype code="MusicType" autocreate="true" generate="true" dynamic="true">
+		<enumtype code="MusicType" dynamic="true">
 		</enumtype>
 	</enumtypes>
 
 	<relations>
-		<relation code="Product2RockBand" autocreate="true" generate="false" localized="false">
+		<relation code="Product2RockBand" localized="false">
 			<sourceElement qualifier="tours" type="Product" collectiontype="set" cardinality="many" ordered="false">
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</sourceElement>
@@ -21,7 +21,7 @@
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</targetElement>
 		</relation>
-		<relation code="Band2MusicType" autocreate="true" generate="false" localized="false">
+		<relation code="Band2MusicType" localized="false">
 			<deployment table="Band2MusicType" typecode="30269" />
 			<sourceElement qualifier="bands" type="Band" collectiontype="set" cardinality="many" ordered="false">
 				<modifiers read="true" write="true" search="true" optional="true" />
@@ -34,7 +34,7 @@
 
 	<itemtypes>
 
-		<itemtype generate="true" code="Concert" extends="VariantProduct" autocreate="true">
+		<itemtype code="Concert" extends="VariantProduct">
 			<attributes>
 				<attribute qualifier="venue" type="java.lang.String">
 					<description>venue of concert</description>
@@ -51,7 +51,7 @@
 			</attributes>
 		</itemtype>
 
-		<itemtype generate="true" code="Product" autocreate="false">
+		<itemtype code="Product" autocreate="false">
 			<attributes>
 				<attribute qualifier="hashtag" type="java.lang.String">
 					<description>hashtag of concert tour for social media</description>
@@ -60,7 +60,7 @@
 			</attributes>
 		</itemtype>
 
-		<itemtype generate="true" code="Band" autocreate="true">
+		<itemtype code="Band">
 			<deployment table="Bands" typecode="30268" />
 			<attributes>
 				<attribute qualifier="code" type="java.lang.String">
