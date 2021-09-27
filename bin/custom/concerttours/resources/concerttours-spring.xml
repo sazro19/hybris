@@ -23,5 +23,7 @@
     <bean id="concerttoursCustomSetup" class="concerttours.setup.ConcerttoursCustomSetup" >
         <property name="importService" ref="importService"/>
     </bean>
+
+    <bean id="concertDaysUntilAttributeHandler" class="concerttours.attributehandlers.ConcertDaysUntilAttributeHandler"/>
 			
 </beans>
