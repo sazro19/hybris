@@ -5,8 +5,7 @@
 <title>Tour Details</title>
 <body>
 <h1>Tour Details</h1>
-Tour Details for ${tour.tourName}
-<p>${tour.description}</p>
+<p>Producer: ${tour.producer.firstName} ${tour.producer.lastName}</p>
 <p>Schedule:</p>
 <table>
     <tr><th>Venue</th><th></th><th>Date</th><th>Days Until</th></tr>

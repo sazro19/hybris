@@ -21,6 +21,7 @@
 				<modifiers read="true" write="true" search="true" optional="true" />
 			</targetElement>
 		</relation>
+
 		<relation code="Band2MusicType" localized="false">
 			<deployment table="Band2MusicType" typecode="30269" />
 			<sourceElement qualifier="bands" type="Band" collectiontype="set" cardinality="many" ordered="false">
@@ -28,6 +29,15 @@
 			</sourceElement>
 			<targetElement qualifier="types" type="MusicType" cardinality="many">
 				<modifiers read="true" write="true" search="true" optional="true" />
+			</targetElement>
+		</relation>
+
+		<relation code="Tour2Producer" localized="false">
+			<sourceElement qualifier="tours" type="Product" collectiontype="set" cardinality="many" ordered="false">
+				<modifiers read="true" write="true" search="true" optional="true"/>
+			</sourceElement>
+			<targetElement qualifier="producer" type="Producer" cardinality="one">
+				<modifiers read="true" write="true" search="true" optional="true"/>
 			</targetElement>
 		</relation>
 	</relations>
@@ -121,6 +131,21 @@
 				</attribute>
 			</attributes>
 		</itemtype>
+
+        <itemtype code="Producer">
+            <deployment table="Producers" typecode="30271"/>
+            <attributes>
+                <attribute qualifier="code" type="java.lang.String">
+                    <persistence type="property"/>
+                </attribute>
+                <attribute qualifier="firstName" type="java.lang.String">
+                    <persistence type="property"/>
+                </attribute>
+                <attribute qualifier="lastName" type="java.lang.String">
+                    <persistence type="property"/>
+                </attribute>
+            </attributes>
+        </itemtype>
 
 	</itemtypes>
 </items>

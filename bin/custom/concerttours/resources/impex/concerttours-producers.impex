@@ -1,0 +1,2 @@
+INSERT_UPDATE Producer; code[unique = true]; firstName ; lastName;
+                      ; P001               ; Alexander ; Zalesskiy
