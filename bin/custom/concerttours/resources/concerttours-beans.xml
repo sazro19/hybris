@@ -31,7 +31,13 @@
         <property name="id" type="String"/>
         <property name="tourName" type="String"/>
         <property name="description" type="String"/>
+        <property name="producer" type="concerttours.data.ProducerData"/>
         <property name="concerts" type="java.util.List&lt;concerttours.data.ConcertSummaryData&gt;"/>
+    </bean>
+    <bean class="concerttours.data.ProducerData">
+        <description>Data object representing a producer</description>
+        <property name="firstName" type="String"/>
+        <property name="lastName" type="String"/>
     </bean>
 
 </beans>
